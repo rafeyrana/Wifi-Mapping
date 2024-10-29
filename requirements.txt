@@ -1,0 +1,8 @@
+gpxpy
+pandas
+matplotlib
+seaborn
+contextily
+geopandas
+pyproj
+speedtest-cli
