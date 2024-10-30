@@ -111,7 +111,7 @@ def speed_test_loop():
             print(f"Upload: {results['upload']} Mbps")
             print(f"Ping: {results['ping']} ms")
         
-        time.sleep(300)
+        time.sleep(120)
 
 def ping_loop():
     """Run ping tests every 5 seconds"""
