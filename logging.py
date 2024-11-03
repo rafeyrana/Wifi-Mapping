@@ -30,7 +30,6 @@ def get_connected_wifi_signal_strength():
         return None, None
 
 def get_ping_stats(host="8.8.8.8", count=3):
-    """Ping Google's DNS server and return statistics"""
     try:
         output = subprocess.check_output(
             ['ping', '-c', str(count), host],
@@ -92,7 +91,6 @@ def write_to_csv(filename, data, fieldnames):
         csvfile.flush()
 
 def speed_test_loop():
-    """Run speed tests every 5 minutes"""
     fieldnames = ['timestamp', 'download_mbps', 'upload_mbps', 'ping_ms']
     while True:
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -114,7 +112,6 @@ def speed_test_loop():
         time.sleep(120)
 
 def ping_loop():
-    """Run ping tests every 5 seconds"""
     fieldnames = ['timestamp', 'min_ms', 'avg_ms', 'max_ms', 'packet_loss']
     while True:
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
